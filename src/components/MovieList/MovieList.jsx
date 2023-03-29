@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types';
 
-export function MovieList({ movies }) {
+const  MovieList = ({ movies }) => {
+  if (!Array.isArray(movies) || movies.length === 0) {
+    return <p>No movies found.</p>;
+  }
+  
   return (
     <ul>
       {movies.map(el => {
@@ -13,6 +17,9 @@ export function MovieList({ movies }) {
     </ul>
   );
 }
+
 MovieList.propTypes = {
   movies: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
+
+export default MovieList;

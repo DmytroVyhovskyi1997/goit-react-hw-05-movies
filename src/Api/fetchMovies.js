@@ -7,3 +7,10 @@ export const fetchTrending = () => {
     return axios(`/trending/movie/day${API_KEY}`)
     .then(res => res.data.results)
   };
+
+
+
+  export const fetchMovies = searchValue => {
+    return axios(`/search/movie${API_KEY}&query=${searchValue}`)
+    .then(res => res.data.results)
+  }
