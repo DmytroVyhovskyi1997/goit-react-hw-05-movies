@@ -7,6 +7,7 @@ export const App = () => {
   
   const StyledLink = styled(NavLink)`
   color: black;
+  margin-right:20px;
 
   &.active {
     color: orange;
@@ -15,16 +16,6 @@ export const App = () => {
   return (
     <Container>
       <Header>
-    {/* <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    > */}
       <nav>
         <StyledLink to="/">Home</StyledLink>
         <StyledLink to="/movies">Movies</StyledLink>
@@ -38,7 +29,6 @@ export const App = () => {
           <Route path="reviews" element={<div>Reviews</div>} />
         </Route>
       </Routes>
-    {/* </div> */}
     
     </Container>
   );
