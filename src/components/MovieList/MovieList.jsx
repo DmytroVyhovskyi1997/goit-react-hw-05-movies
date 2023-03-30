@@ -1,17 +1,16 @@
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 
 const  MovieList = ({ movies }) => {
-  if (!Array.isArray(movies) || movies.length === 0) {
-    return <p>No movies found.</p>;
-  }
+
   
   return (
     <ul>
-      {movies.map(el => {
+      {movies.map(movie => {
         return (
-          <li key={el.id}>
-            <p>{el.title}</p>
-          </li>
+          <li key={movie.id}>
+          <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
+        </li>
         );
       })}
     </ul>
