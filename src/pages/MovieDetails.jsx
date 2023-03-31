@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { getMovieDetails } from "../Api/fetchMovies";
-import { useParams } from "react-router-dom";
+import { useParams, Link  } from "react-router-dom";
+import Home from '../pages/Home'
 
 const MovieDetails = () => {
   const { movieId } = useParams();
@@ -14,6 +15,7 @@ const MovieDetails = () => {
 
   return(
     <main>
+        <Link to={'/home' } element={<Home/>}>Go to back</Link>
       {movie ? (
         <div>
           <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />

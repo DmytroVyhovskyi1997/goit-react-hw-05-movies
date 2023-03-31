@@ -2,8 +2,9 @@ import React, { useState, useEffect} from "react";
 import {fetchMovies } from '../Api/fetchMovies';
 import MovieList from '../components/MovieList/MovieList';
 import Search from "components/Search/Search";
+
 import PropTypes from 'prop-types';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams} from 'react-router-dom';
 
 
 const MovieSearch = () => {
@@ -28,6 +29,7 @@ const MovieSearch = () => {
 
   return (
     <div>
+
       <Search updateQueryString={updateQueryString}/>
       {movies &&
         (movies.length > 0 ? (

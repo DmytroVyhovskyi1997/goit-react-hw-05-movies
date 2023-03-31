@@ -26,6 +26,7 @@ export const Header = styled.header`
 
 export const Link = styled(NavLink)`
   padding: 8px 16px;
+
   border-radius: 4px;
   text-decoration: none;
   color: black;
