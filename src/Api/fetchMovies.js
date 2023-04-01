@@ -25,6 +25,14 @@ export const fetchTrending = () => {
       });
   };
   
-
+  export const fetchCast = movieId => {
+    return axios(`/movie/${movieId}/credits${API_KEY}&language=en-US`)
+      .then(res => res.data.cast.map(member => ({
+        name: member.name,
+        profile_path: member.profile_path,
+        character: member.character,
+      })))
+  }
+  
   
   
