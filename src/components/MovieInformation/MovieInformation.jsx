@@ -1,16 +1,15 @@
 
-import { NavLink, useLocation, useParams } from "react-router-dom";
-import { Suspense, lazy } from "react";
+import { NavLink, useLocation,  } from "react-router-dom";
+import { Suspense,  } from "react";
 
-const Cast = lazy(() => import("../Cast/Cast"));
-const Reviews = lazy(() => import("../Reviews/Reviews"));
+
 
 
 
 const MovieInformation = ({movie, children}) =>{
     const location = useLocation();
     const prevLocation = location.state?.from;
-    const { movieId } = useParams();
+ 
     return(
         <main>
       
