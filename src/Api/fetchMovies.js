@@ -35,5 +35,13 @@ export const fetchTrending = () => {
       })))
   }
   
+  export const fetchReviews = movieId => {
+    return axios(`/movie/${movieId}/reviews${API_KEY}&language=en-US`)
+      .then(res => res.data.results.map(review => ({
+        id:review.id,
+        author: review.author,
+        content: review.content
+      })))
+  }
   
   
