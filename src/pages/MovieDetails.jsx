@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { getMovieDetails } from "../Api/fetchMovies";
 import MovieInformation from '../components/MovieInformation/MovieInformation'
-import { useParams, Link, useLocation, Outlet  } from "react-router-dom";
+import BackButton from "../components/BackButton/BackButton";
+import { useParams, useLocation, Outlet  } from "react-router-dom";
 // import Home from '../pages/Home'
 // const Cast = lazy(() => import('../components/Cast/Cast'));
 
@@ -20,7 +21,7 @@ const MovieDetails = () => {
 
   return(
     <>
-       <Link to={backLinkHref}>Go back</Link>
+       <BackButton to={backLinkHref}>Go back</BackButton>
        {movie && (
       <MovieInformation movie={movie}>
         <Outlet/>

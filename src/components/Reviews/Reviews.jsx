@@ -1,6 +1,7 @@
 import { useEffect, useState  } from "react";
 import { useParams } from "react-router-dom";
 import { fetchReviews } from "../../Api/fetchMovies";
+import {Loader} from '../Loader/Loader'
 
 const Reviews = () => {
     const [reviews, setReviews] = useState(null);
@@ -13,7 +14,7 @@ const Reviews = () => {
     }, [movieId]);
 
     if (!reviews) {
-        return <p>Loading reviews...</p>;
+        return <p><Loader/></p>;
     }
 
     return (

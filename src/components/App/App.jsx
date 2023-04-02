@@ -1,7 +1,7 @@
 import Layout from 'components/Layout/Layout';
 import { lazy, Suspense } from 'react';
 import {  Route, Routes } from 'react-router-dom';
-
+import {Loader} from '../Loader/Loader'
 import { Container } from "./App.styled";
 
 const Home = lazy(() => import('../../pages/Home'));
@@ -14,7 +14,7 @@ export const App = () => {
   
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div><Loader /></div>}>
     <Container>
  
       <Routes>
