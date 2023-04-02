@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div`
   max-width: 960px;
@@ -18,11 +18,8 @@ export const Header = styled.header`
 
   > nav {
     display: flex;
-   
   }
 `;
-
-
 
 export const Link = styled(NavLink)`
   padding: 8px 16px;

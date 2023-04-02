@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
-
 export const StyledCast = styled.li`
   padding: 20px 30px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  a {
+    color: black;
+  }
   img {
     margin-bottom: 10px;
     max-width: 200px;

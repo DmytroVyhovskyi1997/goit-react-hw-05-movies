@@ -7,7 +7,7 @@ export const Link = styled(NavLink)`
   text-decoration: none;
   color: black;
   font-weight: 500;
-  font-weight:bold ;
+  font-weight: bold;
 
   &.active {
     color: white;
@@ -26,8 +26,5 @@ export const Header = styled.header`
 
   > nav {
     display: flex;
-    
-   
   }
 `;
-

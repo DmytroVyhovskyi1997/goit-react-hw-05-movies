@@ -1,20 +1,18 @@
-import React, { useState, useEffect} from "react";
-import {fetchMovies } from '../Api/fetchMovies';
+import React, { useState, useEffect } from 'react';
+import { fetchMovies } from '../Api/fetchMovies';
 import MovieList from '../components/MovieList/MovieList';
-import Search from "components/Search/Search";
+import Search from 'components/Search/Search';
 
 import PropTypes from 'prop-types';
-import { useSearchParams} from 'react-router-dom';
-
+import { useSearchParams } from 'react-router-dom';
 
 const MovieSearch = () => {
- 
   const [searchParams, setSearchParams] = useSearchParams();
   const [movies, setMovies] = useState([]);
   const searchValue = searchParams.get('query');
 
   useEffect(() => {
-    if (!searchValue ) {
+    if (!searchValue) {
       return;
     }
     fetchMovies(searchValue)
@@ -29,8 +27,7 @@ const MovieSearch = () => {
 
   return (
     <div>
-
-      <Search updateQueryString={updateQueryString}/>
+      <Search updateQueryString={updateQueryString} />
       {movies &&
         (movies.length > 0 ? (
           <MovieList movies={movies} />
@@ -41,11 +38,8 @@ const MovieSearch = () => {
   );
 };
 
-
-
 MovieList.propTypes = {
   movies: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default MovieSearch;
-

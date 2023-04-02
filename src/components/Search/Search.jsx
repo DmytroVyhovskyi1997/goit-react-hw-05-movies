@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { StyledForm } from './Search.styled';
 
 const Search = ({ updateQueryString }) => {
   const handleSubmit = evt => {
@@ -9,10 +9,11 @@ const Search = ({ updateQueryString }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <StyledForm onSubmit={handleSubmit}>
+      <h2>Search movies:</h2>
       <input type="text" name="title" />
       <button type="submit">Search</button>
-    </form>
+    </StyledForm>
   );
 };
 
