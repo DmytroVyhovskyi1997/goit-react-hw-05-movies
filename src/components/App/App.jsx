@@ -1,6 +1,6 @@
 import Layout from 'components/Layout/Layout';
 import { lazy, Suspense } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { Loader } from '../Loader/Loader';
 import { Container } from './App.styled';
 
@@ -28,6 +28,7 @@ export const App = () => {
               <Route path="cast" element={<Cast />} />
               <Route path="reviews" element={<Reviews />} />
             </Route>
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
         </Routes>
       </Container>

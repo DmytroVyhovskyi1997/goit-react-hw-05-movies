@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { fetchMovies } from '../Api/fetchMovies';
 import MovieList from '../components/MovieList/MovieList';
 import Search from 'components/Search/Search';
@@ -8,7 +8,7 @@ import { useSearchParams } from 'react-router-dom';
 
 const MovieSearch = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState(null);
   const searchValue = searchParams.get('query');
 
   useEffect(() => {
@@ -21,12 +21,12 @@ const MovieSearch = () => {
   }, [searchValue]);
 
   const updateQueryString = query => {
-    const nextParams = query !== '' ? { query } : {};
+    const nextParams = query !== '' ? { query } : { };
     setSearchParams(nextParams);
   };
 
   return (
-    <div>
+    <>
       <Search updateQueryString={updateQueryString} />
       {movies &&
         (movies.length > 0 ? (
@@ -34,7 +34,7 @@ const MovieSearch = () => {
         ) : (
           <b>No movies found</b>
         ))}
-    </div>
+    </>
   );
 };
 

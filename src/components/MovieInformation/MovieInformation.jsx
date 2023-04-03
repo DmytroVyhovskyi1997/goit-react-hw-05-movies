@@ -10,14 +10,14 @@ import {
 const MovieInformation = ({ movie, children }) => {
   const location = useLocation();
   const prevLocation = location.state?.from;
-  const { title, vote_average, release_date, genres, overview } = movie;
+  const { title, vote_average, release_date, genres, overview,poster_path } = movie;
 
   return (
     <main>
       <MainInfo>
         <StyledImg
-          src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-          alt={movie.title}
+          src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
+          alt={title}
         />
         <StyledItem>
           <h1>
