@@ -1,14 +1,5 @@
 import styled from 'styled-components';
 
-export const StyledLi = styled.li`
- 
-  a {
-    color: black;
-  }
-  a:hover {
-    color: orangered;
-  }
-`;
 
 export const StyledUl = styled.ul`
   padding: 0;
@@ -19,5 +10,11 @@ export const StyledUl = styled.ul`
     font-weight: 500;
     font-size: 20px;
     list-style: decimal;
+  }
+  a {
+    color: black;
+  }
+  a:hover {
+    color: orangered;
   }
 `;
