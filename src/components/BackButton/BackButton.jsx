@@ -6,8 +6,7 @@ const BackButton = ({ to, children }) => {
 };
 
 BackButton.propTypes = {
-  to: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
+  to: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
 };
 
 export default BackButton;
